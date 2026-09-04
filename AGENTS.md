@@ -15,11 +15,16 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 This is a Next.js school project that simulates an online shop for browsing products, without supporting real purchases.
 
 
+## Always apply
+
+- Before making changes for a new task, ask the human developer to create or approve a dedicated branch. Never make changes directly on `main`.
+- Do not run `git commit` or create a pull request unless a human developer explicitly approves it.
+
+
 ## Task-specific guidance
 
 - For names, read [`docs/NAMING_CONVENTIONS.md`](./docs/NAMING_CONVENTIONS.md).
 - For CSS or styling changes, read [`docs/STYLING.md`](./docs/STYLING.md).
-- Do not run `git commit` or create a pull request unless a human developer explicitly approves it.
 
 ### Issue tracker
 
