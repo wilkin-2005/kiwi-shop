@@ -1,5 +1,5 @@
-<!-- BEGIN:nextjs-agent-rules -->
 
+<!-- BEGIN:nextjs-agent-rules -->
 
 # This is NOT the Next.js you know
 
@@ -7,19 +7,33 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
-## Agent skills
+<!-- END:nextjs-agent-rules -->
+
+
+## Project
+
+This is a Next.js school project that simulates an online shop for browsing products, without supporting real purchases.
+
+
+## Always apply
+
+- Before making changes for a new task, ask the human developer to create or approve a dedicated branch. Never make changes directly on `main`.
+- Do not run `git commit` or create a pull request unless a human developer explicitly approves it.
+
+
+## Task-specific guidance
+
+- For names, read [`docs/NAMING_CONVENTIONS.md`](./docs/NAMING_CONVENTIONS.md).
+- For CSS or styling changes, read [`docs/STYLING.md`](./docs/STYLING.md).
 
 ### Issue tracker
 
-Issues and specifications are tracked in this repository's GitHub Issues. See `docs/agents/issue-tracker.md`.
+Issues and specifications are tracked in this repository's GitHub Issues. See [`docs/agents/issue-tracker.md`](./docs/agents/issue-tracker.md).
 
 ### Triage labels
 
-This repository uses the default five triage labels. See `docs/agents/triage-labels.md`.
+This repository uses the default five triage labels. See [`docs/agents/triage-labels.md`](./docs/agents/triage-labels.md).
 
 ### Domain docs
 
-This is a single-context repository using the root `CONTEXT.md` and `docs/adr/`. See `docs/agents/domain.md`.
-
-
-<!-- END:nextjs-agent-rules -->
+This is a single-context repository using the root [`CONTEXT.md`](./CONTEXT.md) and `docs/adr/`. See [`docs/agents/domain.md`](./docs/agents/domain.md).
