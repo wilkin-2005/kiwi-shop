@@ -16,7 +16,6 @@
 | **Query Parameters**         | **snake_case**                                        | `/users?page_number=2&sort_by=name`                                   |
 | **Local Storage Keys**       | **camelCase** (optional prefix)                       | `localStorage.setItem('userSettings', ...)`                           |
 | **Session Storage **Keys**** | **camelCase** (optional prefix)                       | `sessionStorage.setItem('currentSessionId', ...)`                     |
-| **Cookies**                  | **camelCase** (optional prefix, security flags)       | `document.cookie = "sessionId=abc123; path=/; Secure; HttpOnly";`     |
 |                              |                                                       |                                                                       |
 
 ---

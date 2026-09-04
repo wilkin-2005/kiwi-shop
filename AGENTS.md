@@ -10,28 +10,25 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 <!-- END:nextjs-agent-rules -->
 
 
-## One line project description
+## Project
 
 This is a Next.js school project that simulates an online shop for browsing products, without supporting real purchases.
 
 
-## Agent skills
+## Task-specific guidance
+
+- For names, read [`docs/NAMING_CONVENTIONS.md`](./docs/NAMING_CONVENTIONS.md).
+- For CSS or styling changes, read [`docs/STYLING.md`](./docs/STYLING.md).
+- Do not run `git commit` or create a pull request unless a human developer explicitly approves it.
 
 ### Issue tracker
 
-Issues and specifications are tracked in this repository's GitHub Issues. See `docs/agents/issue-tracker.md`.
+Issues and specifications are tracked in this repository's GitHub Issues. See [`docs/agents/issue-tracker.md`](./docs/agents/issue-tracker.md).
 
 ### Triage labels
 
-This repository uses the default five triage labels. See `docs/agents/triage-labels.md`.
+This repository uses the default five triage labels. See [`docs/agents/triage-labels.md`](./docs/agents/triage-labels.md).
 
 ### Domain docs
 
-This is a single-context repository using the root `CONTEXT.md` and `docs/adr/`. See `docs/agents/domain.md`.
-
-
-## Pointers / References
-
-For naming conventions, see [`docs/NAMING_CONVENTIONS.md`](./docs/NAMING_CONVENTIONS.md)
-
-For CSS and styling conventions, see [`docs/STYLING.md`](./docs//STYLING.md)
+This is a single-context repository using the root [`CONTEXT.md`](./CONTEXT.md) and `docs/adr/`. See [`docs/agents/domain.md`](./docs/agents/domain.md).
