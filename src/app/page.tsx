@@ -1,4 +1,3 @@
-
 import Header from "@/components/header/header";
 import HeroSection from "@/components/hero-section/hero-section";
 import FilterSection from "@/components/filter-section/filter-section";
@@ -6,15 +5,15 @@ import ProductCatalogueGrid from "@/components/product-catalogue/product-catalog
 import Pagination from "@/components/pagination/pagination";
 import Footer from "@/components/footer/footer";
 
+import styles from "./page.module.css";
 
 // The main/home page for the Kiwi Shop.
-export default async function HomePage()
-{
+export default async function HomePage() {
   return (
-    <div className="page-container">
+    <div className={styles.pageContainer}>
       <Header />
 
-      <main>
+      <main className={styles.main}>
         <HeroSection />
 
         <FilterSection />

@@ -1,32 +1,44 @@
 import Link from "next/link";
+import styles from "./header.module.css";
 
 // Header component for the Kiwi Shop website. It includes navigation links and a cart action.
-export default function Header()
-{
+export default function Header() {
   return (
-    <header>
-      <nav aria-label="Huvudnavigation">
-
-        <div className="brand">
-          <Link href="/">
-            <span role="img" aria-label="Kiwi-fågel"> 🥝/🐦 </span>
-            <span>Kiwi Shop</span>
+    <header className={styles.header}>
+      <nav aria-label="Huvudnavigation" className={styles.nav}>
+        <div className={styles.brand}>
+          <Link href="/" className={styles.brandLink}>
+            <span role="img" aria-label="Kiwi-fågel" className={styles.brandIcon}>
+              🥝/🐦
+            </span>
+            <span className={styles.brandText}>Kiwi Shop</span>
           </Link>
         </div>
 
-        <ul className="nav-links">
-          <li> <Link href="/"> Hem </Link> </li>
-          <li> <Link href="#catalogue"> Katalog </Link> </li>
-          <li> <Link href="/about"> Om oss </Link> </li>
+        <ul className={styles.navLinks}>
+          <li>
+            <Link href="/" className={styles.navLink}>
+              Hem
+            </Link>
+          </li>
+          <li>
+            <Link href="#catalogue" className={styles.navLink}>
+              Katalog
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className={styles.navLink}>
+              Om oss
+            </Link>
+          </li>
         </ul>
 
-        <div className="cart-action">
-          <Link href="/cart" aria-label="Varukorg med 0 produkter">
+        <div className={styles.cartAction}>
+          <Link href="/cart" aria-label="Varukorg med 0 produkter" className={styles.cartButton}>
             <span>Varukorg</span>
-            <span className="cart-badge">0</span>
+            <span className={styles.cartBadge}>0</span>
           </Link>
         </div>
-
       </nav>
     </header>
   );
