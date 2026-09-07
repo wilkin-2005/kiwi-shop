@@ -6,9 +6,9 @@ export const PRODUCT_API_BASE_URL =
   "http://localhost:4000";
 
 
-export async function getProducts(): Promise<Product[]>
+export async function getProducts(limit: number = 20): Promise<Product[]>
 {
-  const response = await fetch(`${PRODUCT_API_BASE_URL}/products`, {
+  const response = await fetch(`${PRODUCT_API_BASE_URL}/products?_limit=${limit}`, {
     cache: "no-store",
   });
 
