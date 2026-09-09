@@ -1,30 +1,24 @@
-import styles from "./filter-section.module.css";
+
+import "./filter-section.css";
+
 
 // Component for the search and filter section of the Kiwi Shop website.
 export default function FilterSection() {
   return (
-    <section aria-label="Sök och filtrera produkter" className={styles.filterSection}>
-      <form className={styles.form}>
+    <section aria-label="Sök och filtrera produkter" className="filter-section" >
+      <form className="filter-form">
 
-        <div className={styles.searchGroup}>
-          <label htmlFor="search-input" className={styles.label}>
-            Sök produkter
-          </label>
-          <input
-            id="search-input"
-            type="search"
-            name="query"
-            placeholder="Sök bland produkter..."
-            className={styles.input}
-          />
+        <div className="form-group search" >
+          <label htmlFor="search-input" > Sök produkter </label>
+          <input type="search" id="search-input" name="query" placeholder="Sök bland produkter..." />
         </div>
 
-        <div className={styles.controlsRow}>
+        <div className="form-row">
 
-          <div className={styles.filterGroup}>
-            <label htmlFor="category-select" className={styles.label}> Kategori </label>
+          <div className="form-group category">
+            <label htmlFor="category-select"> Kategori </label>
 
-            <select id="category-select" name="category" defaultValue="" className={styles.select}>
+            <select id="category-select" name="category" defaultValue="" >
               <option value="">Alla kategorier</option>
               <option value="beauty">Skönhet</option>
               <option value="fragrances">Dofter</option>
@@ -33,17 +27,10 @@ export default function FilterSection() {
             </select>
           </div>
 
-          <div className={styles.checkboxGroup}>
-            <label className={styles.checkboxLabel}>
-              <input type="checkbox" name="in_stock_only" className={styles.checkbox} />
-              <span>Endast i lager</span>
-            </label>
-          </div>
+          <div className="form-group sorting" >
+            <label htmlFor="sort-select"> Sortera efter </label>
 
-          <div className={styles.sortGroup}>
-            <label htmlFor="sort-select" className={styles.label}> Sortera efter </label>
-
-            <select id="sort-select" name="sort" className={styles.select} defaultValue="latest" >
+            <select id="sort-select" name="sort" defaultValue="latest" >
               <option value="latest"> Senaste </option>
               <option value="price_asc"> Pris: Lågt till högt </option>
               <option value="price_desc"> Pris: Högt till lågt </option>
@@ -51,26 +38,24 @@ export default function FilterSection() {
             </select>
           </div>
 
-        </div>
+          <div className="form-group">
+            <label>
+              <input type="checkbox" name="in_stock_only" />
+              <span> Endast i lager </span>
+            </label>
+          </div>
 
-        <div className={styles.submitGroup}>
-          <button type="submit" className={styles.submitButton}>
-            <svg
-              className={styles.filterIcon}
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-              <path
-                fillRule="evenodd"
-                d="M2.628 1.601C5.028 1.206 7.49 1 10 1s4.973.206 7.372.601a.75.75 0 01.628.74v2.288a2.25 2.25 0 01-.659 1.59l-4.682 4.683a2.25 2.25 0 00-.659 1.59v3.037c0 .684-.31 1.33-.844 1.757l-1.937 1.55A.75.75 0 018 18.25v-5.757a2.25 2.25 0 00-.659-1.591L2.659 6.22A2.25 2.25 0 012 4.629V2.34a.75.75 0 01.628-.74z"
-                clipRule="evenodd"
-              />
+          <button type="submit" className="submit-button">
+            {/* !Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc. */}
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <path d="M96 128C83.1 128 71.4 135.8 66.4 147.8C61.4 159.8 64.2 173.5 73.4 182.6L256 365.3L256 480C256 488.5 259.4 496.6 265.4 502.6L329.4 566.6C338.6 575.8 352.3 578.5 364.3 573.5C376.3 568.5 384 556.9 384 544L384 365.3L566.6 182.7C575.8 173.5 578.5 159.8 573.5 147.8C568.5 135.8 556.9 128 544 128L96 128z"/>
             </svg>
             <span>Filtrera</span>
           </button>
+
         </div>
+
+        
 
       </form>
     </section>
