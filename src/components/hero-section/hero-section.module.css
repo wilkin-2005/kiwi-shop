@@ -70,7 +70,7 @@
   filter: drop-shadow(0 2px 4px oklch(0 0 0 / 0.05));
 }
 
-@media (max-width: 768px) {
+@media (width < 768px) {
   .heroSection {
     flex-direction: column-reverse;
     padding: 2rem 1.25rem;

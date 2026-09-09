@@ -1,12 +1,26 @@
+
 :root {
+  /* Color custom properties */
   --background: oklch(0.97 0.005 260);
   --foreground: oklch(0.2 0.015 260);
+
   --card-bg: oklch(1 0 0);
   --card-border: oklch(0.92 0.008 260);
+
   --muted-text: oklch(0.48 0.015 260);
+
   --primary-accent: oklch(0.51 0.22 275);
   --primary-accent-hover: oklch(0.44 0.22 275);
   --primary-accent-light: oklch(0.95 0.05 275);
+
+  --input-bg: oklch(1 0 0);
+  --input-border: oklch(0.88 0.01 260);
+  --input-focus-ring: oklch(0.51 0.22 275 / 0.15);
+
+  /* Border custom properties */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
 }
 
 html {

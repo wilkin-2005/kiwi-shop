@@ -1,0 +1,216 @@
+
+.filterSection {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px 0 oklch(0 0 0 / 0.05);
+}
+
+.form {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  width: 100%;
+}
+
+.searchGroup {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 180px;
+}
+
+.filterGroup {
+  flex: 0 0 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.checkboxGroup {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding-bottom: 0.125rem;
+}
+
+.checkboxLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--foreground);
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.checkbox {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--primary-accent);
+  cursor: pointer;
+}
+
+.sortGroup {
+  flex: 0 0 190px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.submitGroup {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted-text);
+  letter-spacing: 0.02em;
+}
+
+.input,
+.select {
+  height: 42px;
+  padding: 0.5rem 0.875rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--foreground);
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  font-family: inherit;
+
+  &::placeholder {
+    color: var(--muted-text);
+    opacity: 0.8;
+  }
+
+  &:hover {
+    border-color: var(--primary-accent);
+  }
+
+  &:focus-visible {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px var(--input-focus-ring);
+  }
+}
+
+.submitButton {
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0 1.25rem;
+  background-color: var(--primary-accent);
+  color: oklch(1 0 0);
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 1px 2px 0 oklch(0 0 0 / 0.08);
+  transition: background-color 0.15s ease, transform 0.1s ease;
+
+  &:hover, &:focus-visible {
+    background-color: var(--primary-accent-hover);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.filterIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* Tablet & medium screens: 2 horizontal rows */
+@media (width < 960px) {
+  .form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "search submit"
+      "controls controls";
+    gap: 1rem;
+  }
+
+  .searchGroup {
+    grid-area: search;
+  }
+
+  .submitGroup {
+    grid-area: submit;
+  }
+
+  .controlsRow {
+    grid-area: controls;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .filterGroup {
+    flex: 1 1 160px;
+  }
+
+  .checkboxGroup {
+    flex: 0 0 auto;
+  }
+
+  .sortGroup {
+    flex: 1 1 170px;
+  }
+}
+
+/* Small mobile screens */
+@media (width < 640px) {
+  .filterSection {
+    padding: 1rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+  }
+
+  .searchGroup,
+  .filterGroup,
+  .sortGroup,
+  .submitGroup {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .controlsRow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.875rem;
+  }
+
+  .checkboxGroup {
+    height: auto;
+    padding: 0.25rem 0;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
