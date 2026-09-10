@@ -105,7 +105,7 @@
     font-size: 0.85rem;
     font-weight: 500;
     color: var(--muted-text);
-    background-color: oklch(0.95 0.005 260);
+    background-color: var(--background-muted);
   }
 }
 
@@ -144,7 +144,7 @@
 
   margin-top: auto;
   padding-top: 0.75rem;
-  border-top: 1px solid oklch(0.95 0.005 260);
+  border-top: 1px solid var(--background-muted);
 }
 
 .product-price {
@@ -165,7 +165,7 @@
 
   font-size: 0.9rem;
   font-weight: 600;
-  color: oklch(1 0 0);
+  color: var(--on-accent-text);
   background-color: var(--primary-accent);
 
   border: none;

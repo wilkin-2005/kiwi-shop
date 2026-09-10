@@ -16,15 +16,49 @@ export default function FilterSection() {
         <div className="form-row">
 
           <div className="form-group category">
-            <label htmlFor="category-select"> Kategori </label>
+            <label htmlFor="category"> Kategori </label>
 
-            <select id="category-select" name="category" defaultValue="" >
-              <option value="">Alla kategorier</option>
-              <option value="beauty">Skönhet</option>
-              <option value="fragrances">Dofter</option>
-              <option value="furniture">Möbler</option>
-              <option value="groceries">Livsmedel</option>
-            </select>
+            <select id="category" name="categoryId" defaultValue="" >
+              <option value="" disabled > Välj kategori... </option>
+
+              <optgroup label="Kläder & Mode">
+                  <option value="8"> Men{`'`}s Shirts </option>
+                  <option value="9"> Men{`'`}s Shoes </option>
+                  <option value="10"> Men{`'`}s Watches </option>
+
+                  <option value="20"> Woman{`'`}s Bags </option>
+                  <option value="21"> Woman{`'`}s Dresses </option>
+                  <option value="22"> Woman{`'`}s Jewellery </option>
+                  <option value="23"> Woman{`'`}s Shoes </option>
+                  <option value="24"> Woman{`'`}s Watches </option>
+
+                  <option value="16"> Sunglasses </option>
+                  <option value="18"> Tops </option>
+                  <option value="1"> Beauty </option>
+                  <option value="2"> Fragrance </option>
+                  <option value="13"> Skin Care </option>
+              </optgroup>
+
+              <optgroup label="Elektronik">
+                  <option value="7"> Laptops </option>
+                  <option value="14"> Smartphones </option>
+                  <option value="17"> Tablets </option>
+                  <option value="11"> Mobile Accessories </option>
+              </optgroup>
+
+              <optgroup label="Hem & Kök">
+                  <option value="3"> Furniture </option>
+                  <option value="5"> Home Decoration </option>
+                  <option value="6"> Kitchen Accessories </option>
+                  <option value="4"> Groceries </option>
+              </optgroup>
+
+              <optgroup label="Annat">
+                  <option value="15"> Sports Accessories </option>
+                  <option value="19"> Vehicle </option>
+                  <option value="12"> Motorcycle </option>
+              </optgroup>
+          </select>
           </div>
 
           <div className="form-group sorting" >

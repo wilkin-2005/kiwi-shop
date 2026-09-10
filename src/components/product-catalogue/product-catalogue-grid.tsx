@@ -14,7 +14,7 @@ function ProductCard({ product }: { product: Product })
       <Link href={`/products/${product.id}`} className="product-card-header">
         <div className="product-image-container">
           <Image src={product.thumbnail || product.images?.[0] || "/file.svg"} loading="lazy"
-            width={300} height={300} alt="" /> {/* alt={product.title} */}
+            width={300} height={300} alt="" />
         </div>
 
         <span className="product-category"> {product.brand || "Allmänt"} </span>
@@ -37,6 +37,7 @@ function ProductCard({ product }: { product: Product })
 export default async function ProductCatalogueGrid()
 {
   let products: Product[] = [];
+  const PLACEHOLDER_PRICE_STEP: number = 19.99;
 
   try {
     products = await getProducts();
@@ -68,7 +69,7 @@ export default async function ProductCatalogueGrid()
                 </Link>
 
                 <div className="product-card-footer">
-                  <p className="product-price"> €{(19.99 * (index + 1)).toFixed(2)} </p>
+                  <p className="product-price"> €{( PLACEHOLDER_PRICE_STEP * (index + 1) ).toFixed(2)} </p>
                   <button type="button" className="add-to-cart-button"> Lägg i varukorg </button>
                 </div>
 

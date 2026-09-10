@@ -2,11 +2,13 @@
 :root {
   /* Color custom properties */
   --background: oklch(0.97 0.005 260);
+  --background-muted: oklch(0.95 0.005 260);
   --foreground: oklch(0.2 0.015 260);
 
   --card-bg: oklch(1 0 0);
   --card-border: oklch(0.92 0.008 260);
 
+  --on-accent-text: oklch(1 0 0);
   --muted-text: oklch(0.48 0.015 260);
 
   --primary-accent: oklch(0.51 0.22 275);

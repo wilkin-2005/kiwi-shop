@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import Header from "@/components/header/header";
 import HeroSection from "@/components/hero-section/hero-section";
 import FilterSection from "@/components/filter-section/filter-section";
@@ -8,7 +10,7 @@ import Footer from "@/components/footer/footer";
 import styles from "./page.module.css";
 
 // The main/home page for the Kiwi Shop.
-export default async function HomePage() {
+export default function HomePage() {
   return (
     <div className={styles.pageContainer}>
       <Header />
@@ -18,7 +20,9 @@ export default async function HomePage() {
 
         <FilterSection />
 
-        <ProductCatalogueGrid />
+        <Suspense fallback={<div> Laddar... </div>} >
+          <ProductCatalogueGrid />
+        </Suspense>
 
         <Pagination />
       </main>
