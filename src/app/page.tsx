@@ -4,6 +4,7 @@ import Header from "@/components/header/header";
 import HeroSection from "@/components/hero-section/hero-section";
 import FilterSection from "@/components/filter-section/filter-section";
 import ProductCatalogueGrid from "@/components/product-catalogue/product-catalogue-grid";
+import ProductCatalogueSkeleton from "@/components/product-catalogue/product-catalogue-skeleton";
 import Pagination from "@/components/pagination/pagination";
 import Footer from "@/components/footer/footer";
 
@@ -20,7 +21,7 @@ export default function HomePage() {
 
         <FilterSection />
 
-        <Suspense fallback={<div> Laddar... </div>} >
+        <Suspense fallback={<ProductCatalogueSkeleton />} >
           <ProductCatalogueGrid />
         </Suspense>
 
