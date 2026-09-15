@@ -1,28 +1,13 @@
 
-export interface ProductDimensions {
-  width: number;
-  height: number;
-  depth: number;
+// Category type
+export interface Category {
+  id: number;
+  name: string;
+  slug: string;
+  image: string;
 }
 
-
-export interface ProductReview {
-  rating: number;
-  comment: string;
-  date: string;
-  reviewerName: string;
-  reviewerEmail: string;
-}
-
-
-export interface ProductMeta {
-  createdAt: string;
-  updatedAt: string;
-  barcode: string;
-  qrCode: string;
-}
-
-
+// Product type
 export interface Product {
   id: number;
   title: string;
@@ -46,4 +31,26 @@ export interface Product {
   images: string[];
   thumbnail: string;
   categoryId?: number;
+}
+
+// Product sub-types
+export interface ProductDimensions {
+  width: number;
+  height: number;
+  depth: number;
+}
+
+export interface ProductReview {
+  rating: number;
+  comment: string;
+  date: string;
+  reviewerName: string;
+  reviewerEmail: string;
+}
+
+export interface ProductMeta {
+  createdAt: string;
+  updatedAt: string;
+  barcode: string;
+  qrCode: string;
 }
