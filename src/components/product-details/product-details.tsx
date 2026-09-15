@@ -1,25 +1,53 @@
 
 import Image from "next/image";
-import Link from "next/link";
 
 import type { Category, Product } from "@/types/product";
+import AddToCartButton from "@/components/shopping-cart/add-to-cart-button";
+import "./product-details.css";
 
 
-export default function ProductDetails( { product, category }: { product: Product, category: Category|null } )
+
+function ImageSlides( images: string[] )
 {
+    const imgAmount: number = images.length;
+
+    return(
+        <div className="images-container">
+            <Image src={images[0] || "/file.svg"} alt="" width={1000} height={1000} loading="eager" />
+            <Image src={images[1] || "/file.svg"} alt="" width={1000} height={1000} />
+            <Image src={images[2] || "/file.svg"} alt="" width={1000} height={1000} />
+        </div>
+    );
+}
+
+
+
+export default function ProductDetails( { product, category }:{ product: Product, category: Category|null } )
+{
+
+
     return (
-        <section>
-            <h1> Produkttitel: {product.title} </h1>
+        <article className="product-details-section" aria-labelledby="product-header" >
 
-            <p> Beskrivning: {product.description} </p>
+            {/* <ImageSlides images={product.images} /> */}
+            <div className="images-container">
+                <Image src={product.images[0] || "/file.svg"} alt="" width={1000} height={1000} loading="eager" />
+                <Image src={product.images[1] || "/file.svg"} alt="" width={1000} height={1000} />
+                <Image src={product.images[2] || "/file.svg"} alt="" width={1000} height={1000} />
+            </div>
 
-            <p> Kategori: {category?.name || "Allmänt"} </p>
+            <div className="product-info-container">
+                <h1 id="product-header" > {product.title || "Produkttitel"} </h1>
 
-            <p> Pris: €{product.price} </p>
+                <p className="description"> {product.description || "Beskrivning"} </p>
 
-            <Image src={product.images[0] || product.thumbnail} alt={product.title} width={1000} height={1000} />
-            <Image src={product.images[1] || "/file.svg"}       alt={product.title} width={1000} height={1000} />
-            <Image src={product.images[2] || "/file.svg"}       alt={product.title} width={1000} height={1000} />
-        </section>
+                <span className="category"> {category?.name || "Allmän kategori"} </span>
+
+                <p className="price"> €{product.price || "Pris"} </p>
+
+                <AddToCartButton />
+            </div>
+
+        </article>
     );
 }

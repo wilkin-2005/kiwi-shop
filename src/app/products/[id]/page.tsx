@@ -1,12 +1,14 @@
 
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import "./product-details-page.css";
 
 import ProductDetails from "@/components/product-details/product-details";
 import { getProductById } from "@/lib/product-api";
 import { getCategoryById } from "@/lib/product-api";
 
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 
 export default async function ProductDetailsPage( {params}: { params: Promise<{ id: string }> } )
@@ -31,10 +33,12 @@ export default async function ProductDetailsPage( {params}: { params: Promise<{ 
     const category = await getCategoryById(product.categoryId);
 
     return (
-        <div>
+        <div className="page-container">
             <Header />
 
-            <main>
+            <main className="details-page-main">
+                <Link href="/#catalogue" className="back-button" > Tillbaka till produktkatalogen... </Link>
+
                 <ProductDetails product={product} category={category} />
             </main>
 
