@@ -1,11 +1,4 @@
 
-.page-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background);
-}
-
 .details-page-main {
     width: 100%;
     max-width: 1280px;

@@ -26,6 +26,16 @@
   --radius-lg: 16px;
 }
 
+/* Global page container class. Usually used by divs */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+}
+
+
+
 html {
   height: 100%;
 }

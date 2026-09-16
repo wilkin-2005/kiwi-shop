@@ -2,8 +2,7 @@
 import "./product-details-page.css";
 
 import ProductDetails from "@/components/product-details/product-details";
-import { getProductById } from "@/lib/product-api";
-import { getCategoryById } from "@/lib/product-api";
+import { getProductById, getCategoryById } from "@/lib/product-api";
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
