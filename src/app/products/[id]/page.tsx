@@ -1,6 +1,4 @@
 
-import Header from "@/components/header/header";
-import Footer from "@/components/footer/footer";
 import "./product-details-page.css";
 
 import ProductDetails from "@/components/product-details/product-details";
@@ -34,16 +32,11 @@ export default async function ProductDetailsPage( {params}: { params: Promise<{ 
 
     return (
         <div className="page-container">
-            <Header />
-
             <main className="details-page-main">
                 <Link href="/#catalogue" className="back-button" > Tillbaka till produktkatalogen... </Link>
 
                 <ProductDetails product={product} category={category} />
             </main>
-
-            <Footer />
-
         </div>
     );
 }
