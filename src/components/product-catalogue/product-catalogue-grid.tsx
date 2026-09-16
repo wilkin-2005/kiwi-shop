@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import type { Product } from "@/types/product";
 import { getProducts } from "@/lib/product-api";
+import AddToCartButton from "@/components/shopping-cart/add-to-cart-button";
+
 import "./product-catalogue.css";
 
 
@@ -10,7 +13,7 @@ function ProductCard({ product }: { product: Product })
 {
   return (
     <article key={product.id} className="product-card" role="listitem" aria-labelledby={`product_${product.id}`} >
-      
+
       <Link href={`/products/${product.id}`} className="product-card-header">
         <div className="product-image-container">
           <Image src={product.thumbnail || product.images?.[0] || "/file.svg"} loading="lazy"
@@ -24,9 +27,9 @@ function ProductCard({ product }: { product: Product })
       <div className="product-card-footer">
         <p className="product-price"> €{product.price.toFixed(2)} </p>
 
-        <button type="button" className="add-to-cart-button"> Lägg i varukorg </button>
+        <AddToCartButton />
       </div>
-      
+
     </article>
   );
 }
