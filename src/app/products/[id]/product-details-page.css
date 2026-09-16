@@ -1,11 +1,4 @@
 
-.details-page-main {
-    width: 100%;
-    max-width: 1280px;
-    margin-inline: auto;
-    padding: 2rem 1.5rem;
-}
-
 .back-button {
     display: inline-flex;
     align-items: center;

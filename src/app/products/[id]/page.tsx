@@ -31,7 +31,7 @@ export default async function ProductDetailsPage( {params}: { params: Promise<{ 
 
     return (
         <div className="page-container">
-            <main className="details-page-main">
+            <main className="page-main">
                 <Link href="/#catalogue" className="back-button" > Tillbaka till produktkatalogen... </Link>
 
                 <ProductDetails product={product} category={category} />

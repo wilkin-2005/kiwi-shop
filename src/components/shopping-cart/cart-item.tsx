@@ -1,36 +1,43 @@
 
-// "use client";
-
-import type { Product } from "@/types/product";
-import { getProductById } from "@/lib/product-api";
+import "./cart-item.css";
 import { notFound } from "next/navigation";
+import Image from "next/image";
+import { Product } from "@/types/product";
 
 
-async function fetchRandomProduct(): Promise<Product|null>
+export default async function CartItem( { product }:{ product: Product|null } )
 {
-    const randNr: number = Math.floor(Math.random() * 193);
-    console.log("randNr = " + randNr);
+    if (!product) {
+        notFound();
+    }
 
-    const randProduct = await getProductById(randNr);
+    const quantity = 1;
 
-    return randProduct;
-}
+    const discountAmount = product.price * (product.discountPercentage ?? 0) / 100;
 
-
-export default async function CartItem( productId: number )
-{
-    // { product }:{ product: Product }
-
-    // const product = fetchRandomProduct();
-
-    // if (!product) {
-    //     notFound();
-    // }
-
+    const totalPrice: number = quantity * (product.price - discountAmount);
 
     return(
-        <div>
-            <h3> cart item yes </h3>
-        </div>
+        <li className="cart-list-item">
+            <Image src={product.thumbnail || "/file.svg"} alt="" width={300} height={300} />
+
+            <h3> {product.title} </h3>
+
+            <div className="quantity-picker">
+                <button type="button" className="button-primary" > - </button>
+                <span> {quantity || "x"} </span>
+                <button type="button" className="button-primary" > + </button>
+            </div>
+
+            <p> Pris per produkt: €{product.price.toFixed(2)} </p>
+
+            <p> Rabbat: {product.discountPercentage}% </p>
+
+            <p> Rabbatmängd: €{discountAmount.toFixed(2)} </p>
+
+            <p> Totalt: €{totalPrice.toFixed(2)} </p>
+
+            <button type="button" className="button-primary" > x </button>
+        </li>
     );
 }
