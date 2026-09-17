@@ -2,8 +2,7 @@
 import "./product-details-page.css";
 
 import ProductDetails from "@/components/product-details/product-details";
-import { getProductById } from "@/lib/product-api";
-import { getCategoryById } from "@/lib/product-api";
+import { getProductById, getCategoryById } from "@/lib/product-api";
 
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -32,7 +31,7 @@ export default async function ProductDetailsPage( {params}: { params: Promise<{ 
 
     return (
         <div className="page-container">
-            <main className="details-page-main">
+            <main className="page-main">
                 <Link href="/#catalogue" className="back-button" > Tillbaka till produktkatalogen... </Link>
 
                 <ProductDetails product={product} category={category} />
