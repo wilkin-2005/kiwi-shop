@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import "./shopping-cart.css";
 
 export default function AddToCartButton()
 {
