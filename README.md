@@ -21,6 +21,9 @@ The project is built in Next.js using TypeScript and uses a local copy of the pr
 ## 🚀 Features
 
 - 🔎Browse among different categories of products.
+- ℹ️Click on any product in the catalogue to open a page with more detailed information about that product.
+- 🛒A shopping cart page currently displaying 5 random products.
+- 🪙Total price and discount on all products in cart are correctly calculated.
 - 📱A (mostly) responsive design.
 <!--
 - [ ] 🛒Add products to the shopping cart.
@@ -118,8 +121,8 @@ kiwi-shop/
 ## 🗺️ Roadmap
 
 - [x] Browse among different categories of products.
-- [ ] Product details page.
-- [ ] Shopping cart page.
+- [x] Product details page.
+- [x] Shopping cart page.
 - [ ] Add products to the shopping cart.
 - [ ] Complete a simulated checkout.
 - [ ] Receive an order confirmation.
@@ -131,7 +134,7 @@ kiwi-shop/
 
 - The search and filter fields doesn't work.
 - The pagination doesn't work.
-- The project currently only consists of a homepage, so none of the links lead anywhere.
+- Some of the links in for example the header leads to pages that haven't yet been created and therefore just shows a "*404 This page could not be found*" message when opened.
 
 
 ## 👥 Author
