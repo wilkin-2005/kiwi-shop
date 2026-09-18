@@ -30,7 +30,7 @@ export default function ProductDetails( { product, category }:{ product: Product
 
                 <span className="category"> {category?.name || "Allmän kategori"} </span>
 
-                <p className="price"> €{product.price || "Pris"} </p>
+                <p className="price"> €{product.price.toFixed(2) || "Pris"} </p>
 
                 <AddToCartButton />
             </div>

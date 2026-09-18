@@ -1,0 +1,36 @@
+
+.cart-list-item {
+    list-style: none;
+    background-color: var(--card-bg);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-lg);
+
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 1rem;
+
+    h3 {
+        width: 125px;
+    }
+
+    img {
+        max-height: 100px;
+        width: auto;
+    }
+
+    button {
+        height: 23px;
+        width: 23px;
+        align-self: center;
+
+        color: var(--muted-text);
+        background-color: var(--background-muted);
+        border-radius: var(--radius-xsm);
+    }
+}
+
+.quantity-picker {
+    display: flex;
+    gap: 0.5rem;
+}
